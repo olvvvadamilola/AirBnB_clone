@@ -5,6 +5,7 @@ import unittest
 from datetime import datetime
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
     def test_init(self):
         """Test initialization of BaseModel instance"""
@@ -34,6 +35,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(obj_dict['__class__'], 'BaseModel')
         self.assertEqual(obj_dict['created_at'], obj.created_at.isoformat())
         self.assertEqual(obj_dict['updated_at'], obj.updated_at.isoformat())
+
 
 if __name__ == '__main__':
     unittest.main()
